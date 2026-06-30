@@ -1,0 +1,4 @@
+venv/*
+workspace/build/*
+workspace/install/*
+workspace/log/*

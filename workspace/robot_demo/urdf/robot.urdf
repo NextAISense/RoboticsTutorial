@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+
+<robot name="simple_robot">
+
+  <!-- =========================== -->
+  <!--         Base Link           -->
+  <!-- =========================== -->
+  <link name="base_link">
+    
+    <!-- Visual Representation of Base Link -->
+    <visual>
+      <!-- position and Rotation of base link -->
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+
+      <!-- Shape -->
+      <geometry>
+        <box size="0.6 0.4 0.15"/>
+      </geometry>
+      <material name="cyan">
+        <color rgba="0 1 1 1"/>
+      </material>
+    </visual>
+
+    <visual>
+      <origin xyz="0 0 0.15" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.05" length="0.15"/>
+      </geometry>
+      <material name="purple">
+        <color rgba="1 0 1 1"/>
+      </material>
+    </visual>
+
+    <!-- Collision model of base link -->
+    <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <box size="0.6 0.4 0.15"/>
+        </geometry>
+    </collision>
+
+    <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <cylinder radius="0.05" length="0.15"/>
+        </geometry>
+    </collision>
+    
+
+    <!-- Physical properties of base link -->
+    <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="1"/>
+        <inertia ixx="1" ixy="0" ixz="0" iyx="0" iyy="1" iyz="0" izx="0" izy="0" izz="1"/>
+    </inertial>
+
+  </link>
+
+</robot>
